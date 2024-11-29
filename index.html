@@ -1,22 +1,93 @@
-<html><head>
-	<meta charset="UTF-8">
-	<title>JavaScriptの基礎</title>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>焼肉 牛工大</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <script type="text/javascript">
-        today = new Date();
-        document.write(today);
-        document.write("<h1>コンピュータグラフィックス</h1>");
-        document.write("<p>担当　中村直人</p>");
-        document.write("<p>この授業では、WebGLを用いてコンピュータグラフィックスを作成します。</p>");
-    
-        var image = new Image(128,128); //image オブジェクトの作成
-        image.src = "ganba.png"; //imageのソースの指定
-        document.body.appendChild(image); //imageをDOM要素に組み込む
-    </script>Thu May 30 2024 09:48:25 GMT+0900 (日本標準時)<h1>コンピュータグラフィックス</h1><p>担当　中村直人</p><p>この授業では、WebGLを用いてコンピュータグラフィックスを作成します。</p><img width="128" height="128" src="ganba.png">
+<header>
+    <div class="logo">
+      <img src="../tibakou.png" alt="焼肉 牛工大" width="1900">
+  </div>
+    <nav>
+      <ul>
+        <li><a href="#about">当店について</a></li>
+        <li><a href="#menu">メニュー</a></li>
+        <li><a href="#info">店舗情報</a></li>
+        <li><a href="#contact">お問い合わせ</a></li>
+      </ul>
+    </nav>
+</header>
 
+  <main>
+    <section id="about" class="section">
+      <h2>当店について</h2>
+      <p>当店は、しちりんを使った本格炭火焼肉店です。最新鋭の換気システムを導入し、快適に炭火焼肉を楽しめます。</p>
+      <p>オーダーはタッチパネルから行い、キャッシュレス決済では10%オフの特典をご用意しています。</p>
+		 <div class="image-container">
+        <img src="../素材/sumi.jpg" alt="しちりんでの炭火焼肉">
+      </div>
+    </section>
 
+    <section id="menu" class="section">
+      <h2>メニュー</h2>
+      <div class="menu-grid">
+        <!-- 牛肉セクション -->
+        <div class="menu-item">
+          <h3>牛肉</h3>
+          <img src="../素材/koudai_karubi.jpg" alt="工大カルビ">
+          <p><strong>工大カルビ:</strong> 骨と骨の間の旨味が詰まった部位を丁寧にカット</p>
+          <img src="../素材/karubi.jpg" alt="カルビ">
+          <p><strong>カルビ:</strong> 牛肉の甘味と香りが楽しめる人気の定番メニュー</p>
+          <img src="../素材/harami.jpg" alt="ハラミ">
+          <p><strong>ハラミ:</strong> 国民のアイドル！お店一押し</p>
+        </div>
 
+        <!-- 豚肉セクション -->
+        <div class="menu-item">
+          <h3>豚肉</h3>
+          <img src="../素材/buta_tan.jpg" alt="トンたん塩">
+          <p><strong>トンたん塩:</strong> コリコリ食感を楽しむ、満足の一品</p>
+          <img src="../素材/buta_horumon.jpg" alt="やみつき豚ホルモン">
+          <p><strong>やみつき豚ホルモン:</strong> 癖になる食感</p>
+        </div>
 
-</body></html>
+        <!-- 鶏肉セクション -->
+        <div class="menu-item">
+          <h3>鶏肉</h3>
+          <img src="../素材/tori_yagen.jpg" alt="ハラミ付きヤゲン">
+          <p><strong>ハラミ付きヤゲン:</strong> ジューシーなハラミと軟骨のコリコリ感</p>
+          <img src="../素材/tori_momo.jpg" alt="とりもも">
+          <p><strong>とりもも:</strong> お子様にも人気、やわらかくジューシー</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="info" class="section">
+      <h2>店舗情報</h2>
+      <p><strong>店名:</strong> 牛工大</p>
+      <p><strong>場所:</strong> 〒000-0000 焼肉市美食町1-2-3</p>
+      <p><strong>電話番号:</strong> 000-456-7890</p>
+      <p><strong>メール:</strong> <a href="mailto:info@yakiniki.umai.up">info@yakiniki.umai.up</a></p>
+      <p><strong>モットー:</strong> 中途半端なものは提供しません。一流の肉を格安で！</p>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>お問い合わせ</h2>
+      <form method="get" action="confirmation.html">
+        <label for="name">お名前:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="message">メッセージ:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+        <button type="submit">送信</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 焼肉 牛工大. All rights reserved.</p>
+  </footer>
+</body>
+</html>

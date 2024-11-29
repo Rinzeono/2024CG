@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>確認ページ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>お問い合わせ内容の確認</h1>
+  </header>
+
+  <main>
+    <section class="confirmation">
+      <h2>以下の内容で送信します</h2>
+      <div class="details">
+        <p><strong>お名前:</strong> <span id="name"></span></p>
+        <p><strong>メッセージ:</strong></p>
+        <p id="message"></p>
+      </div>
+      <div class="actions">
+        <button onclick="goBack()">戻る</button>
+        <button onclick="finalSubmit()">送信</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 焼肉 牛工大. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // URLパラメータからデータを取得して表示
+    const params = new URLSearchParams(window.location.search);
+    document.getElementById('name').textContent = params.get('name');
+    document.getElementById('message').textContent = params.get('message');
+
+    // 戻るボタンの処理
+    function goBack() {
+      window.history.back();
+    }
+
+    // 最終送信ボタンの処理
+    function finalSubmit() {
+      alert('送信されました！');
+      window.location.href = 'thankyou.html'; // サンクスページへ遷移
+    }
+  </script>
+</body>
+</html>
